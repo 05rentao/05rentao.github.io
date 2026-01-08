@@ -40,11 +40,14 @@ nav {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     height: 80px;
 }
 
 .nav-tabs {
     display: flex;
+    justify-content: center;
+
     gap: 0.5rem;
 }
 
@@ -109,9 +112,9 @@ nav {
 
 .flex-content {
     display: flex;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
     margin: 1.5em 2em;
     gap: 3em;
     min-width: 75%;
@@ -133,6 +136,7 @@ nav {
     background: transparent;
     user-select: none;
     z-index: 5;
+    font-weight: 700; /* make text in boxes bolder */
 }
 
 /* dynamic (draggable) shows move cursor, static doesn't */

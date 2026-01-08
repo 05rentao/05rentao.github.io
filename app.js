@@ -42,7 +42,7 @@ function initGrid() {
         grid[y] = [];
         gridTimestamps[y] = [];
         for (let x = 0; x < cols; x++) {
-            grid[y][x] = '. ';
+            grid[y][x] = (Math.random() < 1) ? '. ' : "  ";
             gridTimestamps[y][x] = 0;
         }
     }
@@ -234,16 +234,15 @@ function updateGrid() {
 
     for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
-            // compute center pixel for box/inside checks
             const pixelX = x * charWidth + (charWidth / 2);
             const pixelY = y * charHeight + (charHeight / 2);
 
             if (isInsideBox(pixelX, pixelY)) {
-                // inside boxes should be fully blank (two spaces)
                 grid[y][x] = '  ';
             } else {
-                // background uses "dot + space" per cell
-                grid[y][x] = '. ';
+                grid[y][x] = (Math.random() < 1) ? '. ' : "  ";
+                // grid[y][x] = (Math.random() < 0.9) ? '/ ' : "  ";
+
             }
         }
     }
