@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactive ASCII Background</title>
+    <link rel="stylesheet" href="styles.css">        
+</head>
+<body>
+    <div id="ascii-canvas"></div>
+    
+    <nav>
+        <div class="nav-content">
+            <div class="nav-tabs">
+                <a class="tab" href="home.html">Home</a>
+                <a class="tab" href="canvas.html">Canvas</a>
+            </div>
+
+            <div class="controls">
+                <label for="font-size-slider" class="controls-label">ASCII font</label>
+                <input id="font-size-slider" type="range" min="8" max="32" step="1" value="15" />
+                <span id="font-size-value">15px</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="box-dynamic" data-box-id="0" style="left: 200px; top: 50px;">
+            <h1>Welcome to Canvas!</h1>
+        </div>
+        
+        <div class="box-dynamic" data-box-id="1" style="left: 620px; top: 200px;">
+            <p>Move your mouse around to interact with the ASCII background!<br>Drag these text boxes to reposition them!</p>
+        </div>
+
+        <div class="box-dynamic" data-box-id="2" style="left: 360px; top: 175px;">
+            <img src="kitty.jpg" alt="kitty" style="width:160px; height:auto; display:block;">
+        </div>
+
+        <div class="box-dynamic" data-box-id="3" style="left: 20px; top: 400px;">
+            <p>Move your mouse around to interact with the ASCII background!<br>Drag these text boxes to reposition them!</p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
